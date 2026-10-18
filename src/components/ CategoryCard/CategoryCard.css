@@ -1,0 +1,943 @@
+/* =========================================================
+   MAMTA — CATEGORY SECTION
+
+   Premium • Soft • Elegant • Modern
+========================================================= */
+
+.category-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 6%;
+  background: #fff9f4;
+  color: #4a3032;
+  overflow: hidden;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.category-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.category-section::before,
+.category-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid rgba(189, 111, 124, 0.1);
+  border-radius: 50%;
+
+  transition:
+    transform 1s ease,
+    opacity 0.8s ease;
+}
+
+.category-section::before {
+  width: 420px;
+  height: 420px;
+  top: -220px;
+  left: -220px;
+}
+
+.category-section::after {
+  width: 320px;
+  height: 320px;
+  right: -190px;
+  bottom: -170px;
+}
+
+.category-section:hover::before {
+  transform: scale(1.04) rotate(5deg);
+}
+
+.category-section:hover::after {
+  transform: scale(1.05) rotate(-5deg);
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.category-heading {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto 65px;
+  text-align: center;
+
+  transition:
+    transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.6s ease;
+}
+
+.category-heading:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.category-heading::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 45px;
+  height: 1px;
+  background: #bd6f7c;
+  transform: translateX(-50%);
+
+  transition:
+    width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background 0.3s ease;
+}
+
+.category-heading:hover::before {
+  width: 75px;
+  background: #a95766;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.category-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: #bd6f7c;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  transition:
+    color 0.35s ease,
+    letter-spacing 0.45s ease,
+    transform 0.45s ease;
+}
+
+.category-heading:hover .category-eyebrow {
+  color: #a95766;
+  letter-spacing: 3.5px;
+  transform: translateY(-2px);
+}
+
+.category-eyebrow::before,
+.category-eyebrow::after {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: #d9a3aa;
+
+  transition:
+    width 0.45s ease,
+    background 0.35s ease;
+}
+
+.category-heading:hover .category-eyebrow::before,
+.category-heading:hover .category-eyebrow::after {
+  width: 38px;
+  background: #bd6f7c;
+}
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.category-heading h2 {
+  margin: 14px 0 16px;
+
+  color: #4a3032;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(44px, 5vw, 66px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+
+  transition:
+    color 0.45s ease,
+    letter-spacing 0.5s ease,
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.category-heading:hover h2 {
+  letter-spacing: -1.3px;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HEADING HIGHLIGHT
+========================================================= */
+
+.category-heading h2 span {
+  display: block;
+
+  color: #bd6f7c;
+  font-weight: 400;
+
+  transition:
+    color 0.4s ease,
+    letter-spacing 0.5s ease,
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.category-heading:hover h2 span {
+  color: #a95766;
+  letter-spacing: 0.2px;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HEADING DESCRIPTION
+========================================================= */
+
+.category-heading p {
+  max-width: 550px;
+  margin: 0 auto;
+
+  color: #81777a;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.9;
+
+  transition:
+    color 0.4s ease,
+    transform 0.5s ease,
+    opacity 0.4s ease;
+}
+
+.category-heading:hover p {
+  color: #75696c;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/*
+   Four cards fit in the first row.
+
+   The fifth card automatically moves to the
+   second row and justify-content: center
+   keeps it perfectly centered.
+*/
+
+.category-grid > * {
+  width: calc((100% - 72px) / 4);
+}
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+  position: relative;
+  display: block;
+
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.4s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-9px);
+}
+
+/* =========================================================
+   CATEGORY IMAGE
+========================================================= */
+
+.category-image {
+  position: relative;
+
+  width: 100%;
+  height: 370px;
+
+  overflow: hidden;
+
+  background: #f4d9dc;
+
+  border-radius: 155px 155px 20px 20px;
+
+  box-shadow:
+    0 12px 35px rgba(74, 48, 50, 0.06);
+
+  transition:
+    box-shadow 0.5s ease,
+    border-radius 0.5s ease,
+    transform 0.5s ease;
+}
+
+.category-card:hover .category-image {
+  border-radius: 155px 155px 28px 28px;
+
+  box-shadow:
+    0 25px 55px rgba(74, 48, 50, 0.13);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.category-image img {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.5s ease;
+}
+
+.category-card:hover .category-image img {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.category-image::after {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(40, 25, 32, 0.02) 35%,
+      rgba(40, 25, 32, 0.2) 100%
+    );
+
+  transition:
+    background 0.5s ease;
+}
+
+.category-card:hover .category-image::after {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(40, 25, 32, 0.04) 25%,
+      rgba(40, 25, 32, 0.3) 100%
+    );
+}
+
+/* =========================================================
+   CENTER ARROW
+========================================================= */
+
+.category-arrow {
+  position: absolute;
+  z-index: 6;
+
+  top: 10%;
+  left: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(189, 111, 124, 0.94);
+  color: #fff9f4;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-10deg)
+    scale(0.85);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.category-card:hover .category-arrow {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(0)
+    scale(1);
+}
+
+.category-arrow:hover {
+  background: #a95766;
+
+  box-shadow:
+    0 8px 20px rgba(189, 111, 124, 0.3);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(45deg)
+    scale(1.05) !important;
+}
+
+/* =========================================================
+   IMAGE BOTTOM DECORATION
+========================================================= */
+
+.category-image::before {
+  content: "";
+
+  position: absolute;
+  z-index: 5;
+
+  bottom: 17px;
+  left: 50%;
+
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.4s ease,
+    opacity 0.3s ease;
+}
+
+.category-card:hover .category-image::before {
+  width: 60px;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.category-info {
+  padding-top: 21px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.category-card:hover .category-info {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   CATEGORY TITLE
+========================================================= */
+
+.category-info h3 {
+  margin: 0;
+
+  color: #4a3032;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  transition:
+    color 0.3s ease,
+    letter-spacing 0.3s ease,
+    transform 0.3s ease;
+}
+
+.category-card:hover .category-info h3 {
+  color: #bd6f7c;
+  letter-spacing: 0.2px;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CATEGORY DESCRIPTION
+========================================================= */
+
+.category-info p {
+  max-width: 235px;
+  min-height: 38px;
+
+  margin: 8px auto 0;
+
+  color: #81777a;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  transition:
+    color 0.3s ease,
+    transform 0.35s ease;
+}
+
+.category-card:hover .category-info p {
+  color: #75696c;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EXPLORE LINK
+========================================================= */
+
+.category-link {
+  position: relative;
+
+  display: inline-block;
+
+  margin-top: 14px;
+
+  color: #bd6f7c;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+
+  opacity: 0;
+
+  transform: translateY(7px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    color 0.3s ease;
+}
+
+.category-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #bd6f7c;
+
+  transition:
+    width 0.35s ease,
+    background 0.3s ease;
+}
+
+.category-card:hover .category-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category-card:hover .category-link::after {
+  width: 100%;
+}
+
+.category-link:hover {
+  color: #a95766;
+}
+
+.category-link:hover::after {
+  background: #a95766;
+}
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.category-view-all {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 65px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.category-view-all:hover {
+  transform: translateY(-2px);
+}
+
+.category-view-all a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 185px;
+
+  padding: 14px 25px;
+
+  color: #4a3032;
+
+  border: 1px solid #d9b7ba;
+  border-radius: 50px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.category-view-all a:hover {
+  background: #bd6f7c;
+
+  border-color: #bd6f7c;
+
+  color: #fff9f4;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(189, 111, 124, 0.2);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .category-section {
+    padding: 100px 5%;
+  }
+
+  .category-grid {
+    gap: 50px 25px;
+  }
+
+  .category-grid > * {
+    width: calc((100% - 25px) / 2);
+  }
+
+  .category-image {
+    height: 390px;
+  }
+}
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .category-section {
+    padding: 90px 4%;
+  }
+
+  .category-heading {
+    margin-bottom: 55px;
+  }
+
+  .category-heading h2 {
+    font-size: 50px;
+  }
+
+  .category-heading > p {
+    font-size: 18px;
+  }
+
+  .category-image {
+    height: 375px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .category-section {
+    padding: 85px 20px;
+  }
+
+  .category-heading {
+    margin-bottom: 50px;
+  }
+
+  .category-heading::before {
+    top: -23px;
+    width: 38px;
+  }
+
+  .category-heading:hover::before {
+    width: 60px;
+  }
+
+  .category-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .category-eyebrow::before,
+  .category-eyebrow::after {
+    width: 20px;
+  }
+
+  .category-heading:hover .category-eyebrow {
+    letter-spacing: 2.8px;
+  }
+
+  .category-heading:hover .category-eyebrow::before,
+  .category-heading:hover .category-eyebrow::after {
+    width: 30px;
+  }
+
+  .category-heading h2 {
+    margin-top: 14px;
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .category-heading:hover h2 {
+    letter-spacing: -0.7px;
+  }
+
+  .category-heading > p {
+    max-width: 480px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .category-grid {
+    gap: 48px;
+  }
+
+  .category-grid > * {
+    width: 100%;
+  }
+
+  .category-image {
+    height: 420px;
+
+    border-radius:
+      180px 180px 20px 20px;
+  }
+
+  .category-card:hover .category-image {
+    border-radius:
+      180px 180px 28px 28px;
+  }
+
+  /* =======================================================
+     KEEP ARROW VISIBLE ON MOBILE
+  ======================================================= */
+
+  .category-arrow {
+    top: 10%;
+
+    width: 46px;
+    height: 46px;
+
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(0)
+      scale(1);
+  }
+
+  .category-link {
+    opacity: 1;
+    transform: none;
+  }
+
+  .category-info h3 {
+    font-size: 25px;
+  }
+
+  .category-info p {
+    font-size: 12px;
+  }
+
+  .category-view-all {
+    margin-top: 55px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .category-section {
+    padding: 70px 16px;
+  }
+
+  .category-heading h2 {
+    font-size: 37px;
+  }
+
+  .category-heading > p {
+    font-size: 12px;
+  }
+
+  .category-grid {
+    gap: 42px;
+  }
+
+  .category-image {
+    height: 360px;
+
+    border-radius:
+      160px 160px 18px 18px;
+  }
+
+  .category-card:hover .category-image {
+    border-radius:
+      160px 160px 24px 24px;
+  }
+
+  .category-info h3 {
+    font-size: 23px;
+  }
+
+  .category-info p {
+    font-size: 11px;
+  }
+
+  .category-view-all a {
+    min-width: 170px;
+    padding: 12px 20px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .category-section::before,
+  .category-section::after,
+  .category-heading,
+  .category-heading::before,
+  .category-eyebrow,
+  .category-eyebrow::before,
+  .category-eyebrow::after,
+  .category-heading h2,
+  .category-heading h2 span,
+  .category-heading p,
+  .category-card,
+  .category-image,
+  .category-image img,
+  .category-image::before,
+  .category-image::after,
+  .category-arrow,
+  .category-info,
+  .category-info h3,
+  .category-info p,
+  .category-link,
+  .category-link::after,
+  .category-view-all,
+  .category-view-all a {
+    transition: none;
+  }
+
+  .category-section:hover::before,
+  .category-section:hover::after {
+    transform: none;
+  }
+
+  .category-heading:hover {
+    transform: none;
+  }
+
+  .category-heading:hover::before {
+    width: 45px;
+  }
+
+  .category-heading:hover .category-eyebrow {
+    transform: none;
+    letter-spacing: 3px;
+  }
+
+  .category-heading:hover .category-eyebrow::before,
+  .category-heading:hover .category-eyebrow::after {
+    width: 25px;
+  }
+
+  .category-heading:hover h2,
+  .category-heading:hover h2 span,
+  .category-heading:hover p {
+    transform: none;
+  }
+
+  .category-card:hover {
+    transform: none;
+  }
+
+  .category-card:hover .category-image img {
+    transform: none;
+  }
+
+  .category-card:hover .category-info {
+    transform: none;
+  }
+
+  .category-card:hover .category-info h3,
+  .category-card:hover .category-info p {
+    transform: none;
+  }
+
+  .category-view-all:hover {
+    transform: none;
+  }
+
+  .category-view-all a:hover {
+    transform: none;
+  }
+}
