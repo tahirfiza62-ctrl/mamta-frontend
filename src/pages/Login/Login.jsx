@@ -17,7 +17,8 @@ const API_URL =
   import.meta.env.VITE_API_URL ||
   "https://mamta-app-8.onrender.com/api";
 const RECAPTCHA_SITE_KEY =
-  import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+  import.meta.env.VITE_RECAPTCHA_SITE_KEY ||
+  "6LcqsvYtAAAAAAYL2JzpuZYPpIFgShRlu53eRc1J";
 
 const Login = () => {
   const navigate = useNavigate();
