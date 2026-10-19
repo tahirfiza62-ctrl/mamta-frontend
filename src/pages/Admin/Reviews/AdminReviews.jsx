@@ -16,7 +16,7 @@ import "./AdminReviews.css";
 
 const API_URL =
   import.meta.env.VITE_API_URL ||
-  "https://mamta-app-8.onrender.com//api";
+  "https://mamta-app-8.onrender.com/api";
 
 const emptyForm = {
   name: "",

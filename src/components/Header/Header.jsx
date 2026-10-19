@@ -150,7 +150,7 @@ const Header = () => {
 
       try {
         const response = await fetch(
-          "https://mamta-app-8.onrender.com//api/cart",
+          "https://mamta-app-8.onrender.com/api/cart",
           {
             headers: {
               Authorization:

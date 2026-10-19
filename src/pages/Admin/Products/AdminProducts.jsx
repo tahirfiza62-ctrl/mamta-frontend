@@ -20,7 +20,7 @@ import "./AdminProducts.css";
 ========================================================= */
 
 const API_URL =
-  "https://mamta-app-8.onrender.com//api/admin/products";
+  "https://mamta-app-8.onrender.com/api/admin/products";
 
 
 const AdminProducts = () => {
